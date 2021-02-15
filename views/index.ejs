@@ -7,6 +7,77 @@
   <main class="container" >
     <div class="jumbotron"  style="background-color: primary;">
     <h1 class="display-4">Welcome to the <%= title %> page</h1>
+     
+      <% if (title == "Home") { %>
+      <br><br><center>
+      <style>
+      .responsive {
+        width: 100%;
+        height: auto;
+      }
+</style>
+      
+      <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="logo" width="500" height="333" class="responsive">
+      
+      </center><style>
+                .alert {
+                  padding: 20px;
+                  background-color: #f44336;
+                  color: white;
+                }
+
+                .closebtn {
+                  margin-left: 15px;
+                  color: white;
+                  font-weight: bold;
+                  float: right;
+                  font-size: 22px;
+                  line-height: 20px;
+                  cursor: pointer;
+                  transition: 0.3s;
+                }
+
+                .closebtn:hover {
+                  color: black;
+                }
+                </style>
+                </head>
+                <body>
+
+                <br><br><br><br><br>
+                <div class="alert">
+                  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+                  <strong>READ FIRST!</strong> This is google logo. I have just used it for showing an image to this page, All credit for this logo goes to Google.
+        <% } %>
+      
+      
+      <% if (title == "About") { %>
+      <h4><strong>Google is a search engine.</strong></h4>
+      <% }  %>
+      
+      <% if (title == "Services") { %>
+      <h4><strong> <ul>
+          <li>Google photos</li>
+          <li>Google lens</li>
+          <li>Google classrooms</li>
+        </ul> </strong></h4>
+      <% }  %>
+      
+      
+      <% if (title == "Contact Us") { %>
+     
+      <label for="fname">First name:</label><br>
+      <input type="text" id="fname" name="fname"   onfocus="this.value=''" ><br>
+      <label for="comments">Comments:</label><br>
+      <textarea type="text" id="comments" name="comments"  onfocus="this.value=''"></textarea><br><br>
+      <input type="submit" value="Submit" onclick="showData();"><br><br>
+      <label> Your name and Comments : </label>
+      <p><span id='display'></span> </p>
+      <p><span id='display1'></span> </p>
+      
+      </form> 
+  <% }  %>
+
   </div>
   </main>
 
